@@ -8,3 +8,6 @@ Cookie is Node driven, and it works like this (as of March 2016):
 2. Place any arguments in args.txt.
 3. Run by typing into the console `node cookie.js`
 4. The output will be in output.txt.
+
+Try these for a start:
+ - `rp`|Explanation: Read from args (r), then check if it is prime. Returns true or false.

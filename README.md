@@ -10,4 +10,5 @@ Cookie is Node driven, and it works like this (as of March 2016):
 4. The output will be in output.txt.
 
 Try these for a start:
- - `rp`|Explanation: Read from args (r), then check if it is prime. Returns true or false.
+ - `[r+4]`|Explanation: Read from args (r), then check increment by 4.
+ - `wThe value ŕ was passed into arguments."` Pretty self-explanatory (w denotes a write, " closes it.)

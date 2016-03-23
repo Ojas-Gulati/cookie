@@ -35,14 +35,14 @@ function run(stack) {
                     prog[n] = args;
                 }
                 if (prog[n] == "[") {
-                    console.log(prog);
+                    //console.log(prog);
                     prog.splice(n, 1);
 
                     while (1 == 1) {
                         if (prog[n] == "ŕ") {
                             prog[n] = args;
                         }
-                        console.log(prog);
+                        //console.log(prog);
                         if (prog[n] == "\\") {
                             temp.push(prog[n + 1]);
                             n++;
@@ -56,8 +56,8 @@ function run(stack) {
                         } else {
                             if (prog[n] == "r") {
                                 prog[n] = args;
-                                console.log("beep");
-                                console.log(prog);
+                                //console.log("beep");
+                                //.log(prog);
 
                             }
 
@@ -102,11 +102,11 @@ function run(stack) {
                 stack[sp] = isPrime(+stack[sp]);
             case "[":
                 temp = [];
-                console.log(prog);
+                //console.log(prog);
                 prog.splice(i, 1);
 
                 while (1 == 1) {
-                    console.log(prog);
+                    //console.log(prog);
                     if (prog[i] == "]") {
 
                         prog[i] = eval(temp.join(""));
@@ -116,8 +116,8 @@ function run(stack) {
                     } else {
                         if (prog[i] == "r") {
                             prog[i] = args;
-                            console.log("beep");
-                            console.log(prog);
+                            //console.log("beep");
+                            //console.log(prog);
 
                         }
 
@@ -146,7 +146,7 @@ function run(stack) {
                 break;
             case "w":
                 temp = [];
-                console.log(prog);
+                //console.log(prog);
                 while (1 == 1) {
                     if (prog[i] == "'") { break; }
                     if (prog[i] == '"') { break; }
@@ -156,7 +156,7 @@ function run(stack) {
                         continue;
                     }
                     //if (prog[i] == '🕂') { }
-                    console.log(prog[i + 1]);
+                    //console.log(prog[i + 1]);
                     temp.push(prog[i + 1]);
                     i++;
 
@@ -164,8 +164,8 @@ function run(stack) {
                 //i++;
                 //console.log(i);
                 temp.pop();
-                console.log("hi");
-                console.log(temp);
+                //console.log("hi");
+                //console.log(temp);
                 other.push(temp.join(''));
                 temp = [];
                 break;

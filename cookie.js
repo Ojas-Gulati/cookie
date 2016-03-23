@@ -5,6 +5,7 @@ var args = fs.readFileSync('args.txt', 'utf8');
 var prog = program.split('');
 
 var d = 0;
+var stackpr = 1;
 var sp = 0;
 var other = [];
 var paren = [];
@@ -38,6 +39,9 @@ function run(stack) {
                     prog.splice(n, 1);
 
                     while (1 == 1) {
+                        if (prog[n] == "ŕ") {
+                            prog[n] = args;
+                        }
                         console.log(prog);
                         if (prog[n] == "\\") {
                             temp.push(prog[n + 1]);
@@ -94,7 +98,8 @@ function run(stack) {
 
     for (var i = 0; i < prog.length; i++) {
         switch (prog[i]) {
-            
+            case "p":
+                stack[sp] = isPrime(+stack[sp]);
             case "[":
                 temp = [];
                 console.log(prog);
@@ -132,6 +137,9 @@ function run(stack) {
                     //console.log(prog[i]);
                     //n++;
                 }
+                break;
+            case "š":
+                stackpr = 0;
                 break;
             case "ȑ":
                 stack[sp] = args;
@@ -210,6 +218,8 @@ function run(stack) {
 var write;
 if (stack[sp] == undefined) {
     write = other.join('');
+} else if (stackpr == 1) {
+    write = other.join('').concat(String(stack[sp]));
 } else {
     write = other.join('').concat(String(stack[sp]));
 }

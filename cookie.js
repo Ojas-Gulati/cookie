@@ -39,6 +39,12 @@ function run(stack) {
 
                     while (1 == 1) {
                         console.log(prog);
+                        if (prog[n] == "\\") {
+                            temp.push(prog[n + 1]);
+                            n++;
+                            n++;
+                            
+                        }
                         if (prog[n] == "]") {
 
                             prog[n] = eval(temp.join(""));
@@ -88,6 +94,7 @@ function run(stack) {
 
     for (var i = 0; i < prog.length; i++) {
         switch (prog[i]) {
+            
             case "[":
                 temp = [];
                 console.log(prog);
@@ -135,6 +142,11 @@ function run(stack) {
                 while (1 == 1) {
                     if (prog[i] == "'") { break; }
                     if (prog[i] == '"') { break; }
+                    if (prog[i] == "\\") {
+                        i++;
+                        temp.push(prog[i] + 1);
+                        continue;
+                    }
                     //if (prog[i] == '🕂') { }
                     console.log(prog[i + 1]);
                     temp.push(prog[i + 1]);

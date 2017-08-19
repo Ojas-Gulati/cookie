@@ -1,5 +1,5 @@
 # cookie
-Cookie is a short, simple and succinct programming language. (Right now, it's work in progress)
+Cookie is ~a short, simple and succinct programming language. (Right now, it's work in progress)~ discontinued :(
 
 # Get started!
 Cookie is Node driven, and it works like this (as of March 2016):
